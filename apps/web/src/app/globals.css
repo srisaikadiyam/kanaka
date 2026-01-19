@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Token layer (initial v1; to be replaced by final rebrand tokens) */
+  --color-brand-50: 255 246 241;
+  --color-brand-100: 255 226 214;
+  --color-brand-500: 255 111 61;
+  --color-brand-600: 234 84 36;
+
+  --color-ink-900: 18 18 20;
+  --color-ink-700: 45 45 52;
+  --color-ink-500: 98 98 112;
+
+  --color-surface-0: 255 255 255;
+  --color-surface-50: 250 250 252;
+  --color-surface-100: 243 244 246;
+
+  --radius-xl: 20px;
+  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-surface-50 text-ink-900 antialiased;
+}
+
+/* Accessible focus styling */
+:focus-visible {
+  outline: 3px solid rgb(var(--color-brand-500));
+  outline-offset: 3px;
+}

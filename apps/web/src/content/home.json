@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "eyebrow": "Snap Styles · Full Rebrand",
+    "title": "Creator visuals that look premium — fast.",
+    "subtitle": "A reimagined brand + website system designed to convert: modern gallery, clear value props, and an accessible contact flow.",
+    "primaryCta": { "label": "Get in touch", "href": "/contact" },
+    "secondaryCta": { "label": "View gallery", "href": "/gallery" }
+  },
+  "features": [
+    {
+      "title": "Premium by design",
+      "description": "Design tokens + reusable components so everything stays consistent as the site grows."
+    },
+    {
+      "title": "Performance-first",
+      "description": "Built for Core Web Vitals with optimized images and low layout shift."
+    },
+    {
+      "title": "Accessible",
+      "description": "WCAG 2.1 AA patterns: keyboard nav, visible focus, and readable type."
+    }
+  ],
+  "proof": {
+    "items": [
+      { "label": "Core pages", "value": "Home · Gallery · Contact" },
+      { "label": "Target CLS", "value": "≤ 0.1" },
+      { "label": "Target LCP", "value": "≤ 2.5s" }
+    ]
+  },
+  "galleryPreview": {
+    "title": "Gallery preview",
+    "subtitle": "Manifest-driven, deep-linkable, ready for curated stock.",
+    "count": 6,
+    "cta": { "label": "Explore full gallery", "href": "/gallery" }
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "studio-warm-01",
+    "title": "Studio Warm",
+    "caption": "Warm studio lighting with premium texture — placeholder for curated stock.",
+    "category": "Studio",
+    "src": "/gallery/placeholder-01.svg",
+    "width": 1600,
+    "height": 1200,
+    "alt": "Warm studio scene placeholder image",
+    "creditName": "Curated Stock",
+    "licenseNote": "Replace with licensed stock and update credits before launch."
+  },
+  {
+    "id": "lifestyle-neutral-01",
+    "title": "Creator Lifestyle",
+    "caption": "Lifestyle framing designed for brand-safe creator portfolios.",
+    "category": "Lifestyle",
+    "src": "/gallery/placeholder-02.svg",
+    "width": 1600,
+    "height": 1200,
+    "alt": "Lifestyle scene placeholder image",
+    "creditName": "Curated Stock",
+    "licenseNote": "Replace with licensed stock and update credits before launch."
+  },
+  {
+    "id": "product-minimal-01",
+    "title": "Minimal Product",
+    "caption": "Clean product composition to support premium conversion.",
+    "category": "Product",
+    "src": "/gallery/placeholder-03.svg",
+    "width": 1600,
+    "height": 1200,
+    "alt": "Minimal product placeholder image",
+    "creditName": "Curated Stock",
+    "licenseNote": "Replace with licensed stock and update credits before launch."
+  },
+  {
+    "id": "portrait-premium-01",
+    "title": "Premium Portrait",
+    "caption": "A premium portrait direction with soft falloff and depth.",
+    "category": "Portrait",
+    "src": "/gallery/placeholder-04.svg",
+    "width": 1600,
+    "height": 1200,
+    "alt": "Portrait placeholder image",
+    "creditName": "Curated Stock",
+    "licenseNote": "Replace with licensed stock and update credits before launch."
+  },
+  {
+    "id": "editorial-cool-01",
+    "title": "Editorial Cool",
+    "caption": "Cool editorial tone with crisp contrast and modern framing.",
+    "category": "Editorial",
+    "src": "/gallery/placeholder-05.svg",
+    "width": 1600,
+    "height": 1200,
+    "alt": "Editorial placeholder image",
+    "creditName": "Curated Stock",
+    "licenseNote": "Replace with licensed stock and update credits before launch."
+  },
+  {
+    "id": "texture-brand-01",
+    "title": "Brand Texture",
+    "caption": "Texture-forward direction for premium brand storytelling.",
+    "category": "Texture",
+    "src": "/gallery/placeholder-06.svg",
+    "width": 1600,
+    "height": 1200,
+    "alt": "Abstract texture placeholder image",
+    "creditName": "Curated Stock",
+    "licenseNote": "Replace with licensed stock and update credits before launch."
+  }
+]
