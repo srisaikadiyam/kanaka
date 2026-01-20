@@ -7,12 +7,14 @@ import type { GalleryItem } from '@/content/gallery';
 export function Lightbox({
   open,
   item,
+  sharePath,
   onClose,
   onNext,
   onPrev
 }: {
   open: boolean;
   item?: GalleryItem;
+  sharePath?: string;
   onClose: () => void;
   onNext: () => void;
   onPrev: () => void;
@@ -85,20 +87,20 @@ export function Lightbox({
       role="dialog"
       aria-modal="true"
       aria-label={`Image viewer: ${title}`}
-      className="fixed inset-0 z-50 grid place-items-center bg-black/60 p-4"
+      className="fixed inset-0 z-50 grid place-items-center bg-black/75 p-4"
       onMouseDown={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div ref={dialogRef} className="w-full max-w-4xl overflow-hidden rounded-xl bg-surface-0 shadow-soft">
-        <div className="flex items-center justify-between border-b border-black/10 p-4">
-          <p className="text-sm font-medium text-ink-900">{title ?? 'Gallery item'}</p>
+      <div ref={dialogRef} className="w-full max-w-4xl overflow-hidden rounded-xl bg-surface-0 ring-1 ring-black/15">
+        <div className="flex items-center justify-between border-b border-black/15 p-4">
+          <p className="text-sm font-semibold text-ink-900">{title ?? 'Gallery item'}</p>
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={async () => {
                 if (!item) return;
-                const url = `${window.location.origin}/gallery/${item.id}`;
+                const url = `${window.location.origin}${sharePath ?? `/gallery/${item.id}`}`;
                 try {
                   await navigator.clipboard.writeText(url);
                 } catch {
@@ -146,22 +148,22 @@ export function Lightbox({
             <button
               type="button"
               onClick={onPrev}
-              className="rounded-xl bg-surface-0 px-4 py-3 text-sm ring-1 ring-black/10 hover:bg-surface-50"
+              className="rounded-xl bg-surface-0 px-4 py-3 text-sm font-medium ring-1 ring-black/15 hover:bg-surface-50"
             >
               Prev
             </button>
             <button
               type="button"
               onClick={onNext}
-              className="rounded-xl bg-surface-0 px-4 py-3 text-sm ring-1 ring-black/10 hover:bg-surface-50"
+              className="rounded-xl bg-surface-0 px-4 py-3 text-sm font-medium ring-1 ring-black/15 hover:bg-surface-50"
             >
               Next
             </button>
           </div>
         </div>
         {item ? (
-          <div className="border-t border-black/10 p-4">
-            <p className="text-sm text-ink-700">{item.caption}</p>
+          <div className="border-t border-black/15 p-4">
+            <p className="text-base leading-relaxed text-ink-700">{item.caption}</p>
             <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-ink-500">
               <span>Category: {item.category}</span>
               <span>

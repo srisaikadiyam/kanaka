@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container';
+import { PageHeader } from '@/components/PageHeader';
 
 export const metadata = {
   title: 'Levels',
@@ -8,10 +9,10 @@ export const metadata = {
 export default function LevelsPage() {
   return (
     <Container className="py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">Levels</h1>
-      <p className="mt-4 max-w-2xl text-ink-700">
-        Placeholder page. We’ll decide whether to keep this as a public page or retire it with a redirect.
-      </p>
+      <PageHeader
+        title="Levels"
+        lead="Placeholder page. We’ll decide whether to keep this as a public page or retire it with a redirect."
+      />
     </Container>
   );
 }

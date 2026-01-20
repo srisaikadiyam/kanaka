@@ -33,7 +33,7 @@ export function ContactForm() {
 
   return (
     <form
-      className="rounded-xl bg-surface-0 p-6 shadow-soft ring-1 ring-black/5"
+      className="rounded-xl bg-surface-0 p-6 ring-1 ring-black/15"
       onSubmit={async (e) => {
         e.preventDefault();
         if (!canSubmit) return;
@@ -79,7 +79,7 @@ export function ContactForm() {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="h-11 w-full rounded-xl border border-black/10 bg-surface-0 px-3 text-sm"
+            className="h-11 w-full rounded-xl border border-black/15 bg-surface-0 px-3 text-sm"
             autoComplete="name"
             required
           />
@@ -90,7 +90,7 @@ export function ContactForm() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-11 w-full rounded-xl border border-black/10 bg-surface-0 px-3 text-sm"
+            className="h-11 w-full rounded-xl border border-black/15 bg-surface-0 px-3 text-sm"
             autoComplete="email"
             inputMode="email"
             required
@@ -102,7 +102,7 @@ export function ContactForm() {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="min-h-28 w-full resize-y rounded-xl border border-black/10 bg-surface-0 px-3 py-2 text-sm"
+            className="min-h-28 w-full resize-y rounded-xl border border-black/15 bg-surface-0 px-3 py-2 text-sm"
             required
           />
         </Field>
@@ -115,12 +115,14 @@ export function ContactForm() {
         </div>
 
         {formState.status === 'success' ? (
-          <div className="rounded-xl bg-brand-50 p-4 text-sm text-ink-900">
+          <div className="rounded-xl bg-surface-50 p-4 text-sm font-medium text-ink-900 ring-1 ring-black/10">
             Message received. We’ll get back to you shortly.
           </div>
         ) : null}
         {formState.status === 'error' ? (
-          <div className="rounded-xl bg-surface-100 p-4 text-sm text-ink-900">{formState.message}</div>
+          <div className="rounded-xl bg-surface-100 p-4 text-sm font-medium text-ink-900 ring-1 ring-black/10">
+            {formState.message}
+          </div>
         ) : null}
       </div>
     </form>

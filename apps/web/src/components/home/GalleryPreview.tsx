@@ -11,10 +11,10 @@ export function GalleryPreview({ galleryPreview }: { galleryPreview: HomeContent
       <Container className="py-16">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight">{galleryPreview.title}</h2>
-            <p className="mt-2 max-w-2xl text-ink-700">{galleryPreview.subtitle}</p>
+            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">{galleryPreview.title}</h2>
+            <p className="mt-3 max-w-2xl text-lg leading-relaxed text-ink-700">{galleryPreview.subtitle}</p>
           </div>
-          <Link href={galleryPreview.cta.href} className="text-sm font-medium text-brand-600 underline">
+          <Link href={galleryPreview.cta.href} className="text-sm font-medium text-ink-900 underline underline-offset-4">
             {galleryPreview.cta.label}
           </Link>
         </div>
@@ -24,7 +24,7 @@ export function GalleryPreview({ galleryPreview }: { galleryPreview: HomeContent
             <Link
               key={item.id}
               href={`/gallery/${item.id}`}
-              className="group overflow-hidden rounded-xl bg-surface-0 shadow-soft ring-1 ring-black/5"
+              className="group overflow-hidden rounded-xl bg-surface-0 ring-1 ring-black/10"
             >
               <div className="relative aspect-[4/3] w-full">
                 <Image
@@ -37,7 +37,7 @@ export function GalleryPreview({ galleryPreview }: { galleryPreview: HomeContent
               </div>
               <div className="p-4">
                 <p className="text-sm font-medium text-ink-900">{item.title}</p>
-                <p className="mt-1 text-xs text-ink-500">{item.category}</p>
+                <p className="mt-1 text-xs font-medium uppercase tracking-wide text-ink-500">{item.category}</p>
               </div>
             </Link>
           ))}

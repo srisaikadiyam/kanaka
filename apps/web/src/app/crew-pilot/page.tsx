@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container';
+import { PageHeader } from '@/components/PageHeader';
 
 export const metadata = {
   title: 'Crew & Pilot',
@@ -8,10 +9,10 @@ export const metadata = {
 export default function CrewPilotPage() {
   return (
     <Container className="py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">Crew & Pilot</h1>
-      <p className="mt-4 max-w-2xl text-ink-700">
-        Placeholder page. If this is part of the product offering, we’ll convert it into a polished branded landing.
-      </p>
+      <PageHeader
+        title="Crew & Pilot"
+        lead="Placeholder page. If this is part of the product offering, we’ll convert it into a polished branded landing."
+      />
     </Container>
   );
 }

@@ -20,16 +20,15 @@ export function Button({
   type,
   ...rest
 }: ButtonProps) {
-
   const base =
-    'inline-flex items-center justify-center rounded-xl font-medium transition-colors focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50';
+    'inline-flex items-center justify-center rounded-xl font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50';
   const sizes: Record<ButtonSize, string> = {
     md: 'h-10 px-4 text-sm',
     lg: 'h-12 px-5 text-base'
   };
   const variants: Record<ButtonVariant, string> = {
-    primary: 'bg-brand-500 text-white shadow-soft hover:bg-brand-600',
-    secondary: 'bg-surface-0 text-ink-900 ring-1 ring-black/10 hover:bg-surface-50',
+    primary: 'bg-ink-900 text-white ring-1 ring-black/10 hover:bg-ink-700',
+    secondary: 'bg-surface-0 text-ink-900 ring-1 ring-black/15 hover:bg-surface-50',
     ghost: 'bg-transparent text-ink-900 hover:bg-surface-100'
   };
 

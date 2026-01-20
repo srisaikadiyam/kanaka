@@ -10,15 +10,15 @@
   --color-brand-600: 234 84 36;
 
   --color-ink-900: 18 18 20;
-  --color-ink-700: 45 45 52;
-  --color-ink-500: 98 98 112;
+  --color-ink-700: 34 34 40;
+  --color-ink-500: 70 70 84;
 
   --color-surface-0: 255 255 255;
   --color-surface-50: 250 250 252;
   --color-surface-100: 243 244 246;
 
   --radius-xl: 20px;
-  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 html {
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  @apply bg-surface-50 text-ink-900 antialiased;
+  @apply bg-surface-0 text-ink-900 antialiased;
 }
 
 /* Accessible focus styling */

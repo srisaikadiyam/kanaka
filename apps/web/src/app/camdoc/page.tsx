@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container';
+import { PageHeader } from '@/components/PageHeader';
 
 export const metadata = {
   title: 'Snap Stream Docs',
@@ -8,10 +9,10 @@ export const metadata = {
 export default function CamDocPage() {
   return (
     <Container className="py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">Snap Stream Docs</h1>
-      <p className="mt-4 max-w-2xl text-ink-700">
-        Placeholder docs page. We’ll migrate content and restructure it for readability and SEO.
-      </p>
+      <PageHeader
+        title="Snap Stream Docs"
+        lead="Placeholder docs page. We’ll migrate content and restructure it for readability and SEO."
+      />
     </Container>
   );
 }

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Container } from '@/components/Container';
 import { Logo } from '@/components/Logo';
+import { HeaderNav } from '@/components/HeaderNav';
 
 const nav = [
   { href: '/', label: 'Home' },
@@ -10,25 +11,15 @@ const nav = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-black/5 bg-surface-0/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-black/10 bg-surface-0/90 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="inline-flex items-center gap-2">
           <Logo />
-          <span className="font-semibold tracking-tight">Snap Styles</span>
+          <span className="text-base font-semibold tracking-tight">Snap Styles</span>
         </Link>
-        <nav aria-label="Primary" className="hidden items-center gap-6 md:flex">
-          {nav.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm text-ink-700 hover:text-ink-900">
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <Link
-          href="/contact"
-          className="rounded-xl bg-brand-500 px-4 py-2 text-sm font-medium text-white shadow-soft hover:bg-brand-600"
-        >
-          Contact
-        </Link>
+        <div className="flex items-center gap-4">
+          <HeaderNav items={nav} />
+        </div>
       </Container>
     </header>
   );

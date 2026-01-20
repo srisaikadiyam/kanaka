@@ -7,7 +7,7 @@ type ContactPayload = {
   company?: unknown; // honeypot
 };
 
-function isNonEmptyString(value: unknown) {
+function isNonEmptyString(value: unknown): value is string {
   return typeof value === 'string' && value.trim().length > 0;
 }
 

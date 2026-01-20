@@ -8,6 +8,15 @@ export type GalleryCategory =
   | 'Editorial'
   | 'Texture';
 
+export const GALLERY_CATEGORIES: ReadonlyArray<GalleryCategory> = [
+  'Studio',
+  'Lifestyle',
+  'Product',
+  'Portrait',
+  'Editorial',
+  'Texture'
+];
+
 export type GalleryItem = {
   id: string;
   title: string;
@@ -24,8 +33,8 @@ export type GalleryItem = {
 
 export const galleryItems = galleryRaw as unknown as GalleryItem[];
 
-export const galleryCategories: Array<GalleryCategory> = Array.from(
-  new Set(galleryItems.map((item) => item.category))
+export const galleryCategories: Array<GalleryCategory> = GALLERY_CATEGORIES.filter((category) =>
+  galleryItems.some((item) => item.category === category)
 );
 
 export function getGalleryItemById(id: string | undefined) {

@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container';
+import { PageHeader } from '@/components/PageHeader';
 
 export const metadata = {
   title: 'Why Snap Styles',
@@ -8,10 +9,10 @@ export const metadata = {
 export default function WhyPage() {
   return (
     <Container className="py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">Why Snap Styles</h1>
-      <p className="mt-4 max-w-2xl text-ink-700">
-        Placeholder page. We’ll rewrite this as a conversion-focused story page aligned to the new brand messaging.
-      </p>
+      <PageHeader
+        title="Why Snap Styles"
+        lead="Placeholder page. We’ll rewrite this as a conversion-focused story page aligned to the new brand messaging."
+      />
     </Container>
   );
 }
